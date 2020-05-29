@@ -2,7 +2,7 @@
 #   backend "s3" {}
 # }
 #
-# data "aws_caller_identity" "default" {}
+data "aws_caller_identity" "default" {}
 
 # Make a topic
 # resource "aws_sns_topic" "default_prefix" {
