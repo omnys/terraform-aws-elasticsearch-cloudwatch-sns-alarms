@@ -61,7 +61,7 @@ module "es_alarms" {
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
-| `domain_name` | The Elasticserach domain name you want to monitor. | string | - | yes |
+| `domain_name` | The Elasticsearch domain name you want to monitor. | string | - | yes |
 | `alarm_name_postfix` | Alarm name postfix | string | `""` | no |
 | `alarm_name_prefix` | Alarm name prefix | string | `""` | no |
 | `cpu_utilization_threshold` | The maximum percentage of CPU utilization | string | `80` | no |
@@ -80,14 +80,7 @@ module "es_alarms" {
 | `monitor_jvm_memory_pressure_too_high` | Enable monitoring of JVM memory pressure is too high | string | `true` | no |
 | `monitor_master_cpu_utilization_too_high` | Enable monitoring of CPU utilization of master nodes are too high. Only enable this when dedicated master is enabled | string | `false` | no |
 | `monitor_master_jvm_memory_pressure_too_high` | Enable monitoring of JVM memory pressure of master nodes are too high. Only enable this wwhen dedicated master is enabled | string | `false` | no |
-| `sns_topic` | SNS topic you want to specify. If leave empty, it will use a prefix and a timestampe appended | string | `""` | no |
-
-## Outputs
-
-| Name | Description |
-|------|-------------|
-| `sns_topic_arn`  | The ARN of the SNS topic |
-| `sns_topic_name` | The SNS topic name |
+| `sns_topic` | SNS topic arn you want to use. | string | `""` | yes |
 
 ## Share the Love
 
