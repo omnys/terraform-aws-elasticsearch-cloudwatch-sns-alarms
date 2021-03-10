@@ -81,6 +81,7 @@ module "es_alarms" {
 | `monitor_master_cpu_utilization_too_high` | Enable monitoring of CPU utilization of master nodes are too high. Only enable this when dedicated master is enabled | string | `false` | no |
 | `monitor_master_jvm_memory_pressure_too_high` | Enable monitoring of JVM memory pressure of master nodes are too high. Only enable this wwhen dedicated master is enabled | string | `false` | no |
 | `sns_topic` | SNS topic arn you want to use. | string | `""` | yes |
+| `memory_pressure_too_high_period` | The period in seconds over which jvm memory pressure is checked. | string | `"900"` | no |
 
 ## Share the Love
 
