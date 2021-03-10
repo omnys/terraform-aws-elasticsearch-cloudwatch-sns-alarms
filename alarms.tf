@@ -162,7 +162,7 @@ resource "aws_cloudwatch_metric_alarm" "jvm_memory_pressure_too_high" {
   evaluation_periods  = "1"
   metric_name         = "JVMMemoryPressure"
   namespace           = "AWS/ES"
-  period              = "900"
+  period              = var.memory_pressure_too_high_period
   statistic           = "Maximum"
   threshold           = local.thresholds["JVMMemoryPressureThreshold"]
   alarm_description   = "Elasticsearch JVM memory pressure is too high over last 15 minutes"

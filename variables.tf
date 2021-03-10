@@ -124,3 +124,9 @@ variable "master_jvm_memory_pressure_threshold" {
 
 
 }
+
+variable "memory_pressure_too_high_period" {
+  description = "The period in seconds over which jvm memory pressure is checked."
+  type = string
+  default = "900"
+}
